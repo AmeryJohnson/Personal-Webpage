@@ -1,0 +1,51 @@
+{% extends 'shared/layout.html' %}
+
+{% block extracss %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='piano/css/piano.css') }}">
+{% endblock %}
+
+{% block extrajs %}
+    <script src="{{ url_for('static', filename='piano/js/piano.js') }}" defer></script>
+{% endblock %}
+
+{% block maincontent %}
+
+    <div class="center-text">
+        <p>Behold piano great and old, it's master slumbers in far off cold,
+            If you wish to see anew, call out to it - we see you.</p>
+    </div>
+
+      <!-- Background for piano -->
+      <div class="greySquare">
+
+        <div class="pianoName">The Great Old One</div>
+        <div class="awokenText">I have awoken</div>
+        <!-- Construction of piano below -->
+        <div class="piano">
+            <div class="whiteKeys">
+              <div id="whiteKey1" class="whiteKey"></div>
+              <div id="whiteKey2" class="whiteKey"></div>
+              <div id="whiteKey3" class="whiteKey"></div>
+              <div id="whiteKey4" class="whiteKey"></div>
+              <div id="whiteKey5" class="whiteKey"></div>
+              <div id="whiteKey6" class="whiteKey"></div>
+              <div id="whiteKey7" class="whiteKey"></div>
+              <div id="whiteKey8" class="whiteKey"></div>
+              <div id="whiteKey9" class="whiteKey"></div>
+              <div id="whiteKey10" class="whiteKey"></div>
+            </div>
+            <div class="blackKeys">
+              <div id="blackKey1" class="blackKey"></div>
+              <div id="blackKey2" class="blackKey"></div>
+              <div id="blackKey3" class="blackKey"></div>
+              <div id="blackKey4" class="blackKey"></div>
+              <div id="blackKey5" class="blackKey"></div>
+              <div id="blackKey6" class="blackKey"></div>
+              <div id="blackKey7" class="blackKey"></div>
+            </div>
+        </div>
+        <!-- Image for great old one - initially hidden -->
+        <img id="greatOldOneImage" src="/static/piano/images/texture.jpeg" alt="Great Old One" loading="lazy">
+      </div>
+
+{% endblock %}

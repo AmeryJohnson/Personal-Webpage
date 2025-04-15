@@ -1,0 +1,141 @@
+nav {
+  position: relative; /* Positions the nav element relative to its normal position */
+  width: 100%; /* Makes the nav span the full width of the viewport */
+  height: 15vh; /* Sets the nav height to 15% of the viewport height */
+  background-color: #177017; /* Applies a green background color */
+  background-size: cover; /* Ensures background covers the entire nav area */
+  background-repeat: no-repeat; /* Prevents the background from repeating */
+  padding: 0; /* Removes any default padding */
+  top: 0; /* Positions the nav at the top of the page */
+  border: none; /* Removes any borders */
+  outline: none; /* Removes the outline that might appear on focus */
+  margin: 0; /* Removes default margin */
+  display: flex; /* Uses flexbox to align items within the nav */
+  justify-content: space-between; /* Distributes space evenly between child elements */
+  align-items: center; /* Vertically centers the child elements */
+  color: #ffffff; /* Sets the font color to white */
+  object-fit: contain;
+}
+
+.nav-left {
+  margin-left: 10vw; /* Adds left margin equivalent to 10% of the viewport width */
+  display: flex; /* Enables flexbox for child elements inside .nav-left */
+  justify-content: space-between; /* Distributes space evenly between child elements */
+}
+
+.nav-links {
+  margin-right: 5vw; /* Adds right margin equivalent to 10% of the viewport width */
+  display: flex; /* Uses flexbox for arranging links inside .nav-links */
+  justify-content: space-between; /* Distributes space between the links evenly */
+  align-items: center; /* Vertically centers the links */
+  color: #ffffff; /* Ensures the text color remains white */
+}
+
+.nav-links a {
+  margin-right: 3vw; /* Adds 15px of space to the right of each link */
+  opacity: 1; /* Initial opacity is fully visible */
+  transition: opacity 0.15s ease-in-out, text-decoration 0.15s ease-in-out; /* Adds smooth transition for opacity and text decoration changes */
+  text-decoration: none; /* Removes the underline from the links */
+  color: #FFFFFFFF; /* Sets the link text color to white */
+}
+
+.nav-links img {
+  width: 10vh; /* Sets the image width to 10% of the viewport height */
+  height: auto; /* Ensures the aspect ratio of the image is preserved */
+}
+
+.nav-links a:hover {
+  opacity: 0.6; /* Reduces opacity to 60% on hover for a fade effect */
+}
+
+.nav-single-link {
+  display: none; /* Initially hides this element */
+}
+
+.nav-single-link a {
+  /* Empty but reserved for future styling of .nav-single-link a elements */
+}
+
+.nav-single-link img {
+  /* Empty but reserved for future styling of .nav-single-link img elements */
+}
+
+.nav-single-link a:hover {
+  opacity: 0.6; /* Sets hover opacity effect similar to other links */
+}
+
+/* Responsive design for screens with a max width of 650px */
+@media screen and (max-width: 650px) {
+    .nav-links {
+        display: none; /* Hides the regular navigation links on smaller screens */
+    }
+
+    .nav-single-link {
+        position: relative; /* Positions the .nav-single-link relative to its container */
+        margin-right: 3vw; /* Removes any right margin */
+        display: flex; /* Displays as flexbox */
+        justify-content: space-between; /* Distributes space between items evenly */
+        align-items: center; /* Vertically centers the items */
+        color: #FFFFFFFF; /* Sets the text color to white */
+        width: 12vw; /* Sets the image width to 12 of the viewport height */
+        height: 10vh; /* Ensures the aspect ratio of the image is preserved */
+    }
+
+    .nav-single-link a {
+        opacity: 0.6; /* Initial opacity set to 60% */
+        transition: opacity 0.15s ease-in-out, text-decoration 0.15s ease-in-out; /* Smooth transition for hover effects */
+        text-decoration: none; /* Removes underline from the link */
+        color: #FFFFFFFF; /* Ensures the link text color is white */
+
+    }
+
+    .nav-single-link a:hover {
+        opacity: 0.6; /* Sets hover opacity effect */
+    }
+
+    /* Checkbox hack for a dropdown menu toggle */
+    .menu-toggle {
+        display: none; /* Initially hides the menu toggle checkbox */
+    }
+
+    .menu-icon {
+        cursor: pointer; /* Changes cursor to pointer when hovering over the menu icon */
+    }
+
+    .menu-icon img {
+        width: auto; /* Sets the width of the menu icon image */
+        height: 10vh; /* Maintains the image aspect ratio */
+        object-fit: contain;
+    }
+
+    .menu-icon img:hover {
+        opacity: 0.6; /* Sets hover opacity effect for the menu icon */
+    }
+
+    /* Styles for when the menu toggle is checked (dropdown menu becomes visible) */
+    .menu-toggle:checked + .dropdown-content {
+        display: block; /* Shows the dropdown content when menu-toggle is checked */
+        position: absolute; /* Positions the dropdown content absolutely */
+        top: 100%; /* Positions dropdown directly below the nav */
+        right: 0; /* Aligns the dropdown to the left of the container */
+    }
+
+    .nav-single-link .dropdown-content {
+        display: none; /* Initially hides the dropdown content */
+        background-color: #f9f9f9; /* Sets a light gray background for the dropdown */
+        min-width: 25vw; /* Sets a minimum width for the dropdown */
+        box-shadow: 0 1.5vw 2.4vw 0 rgba(0, 0, 0, 0.2); /* Adds a shadow for dropdown styling */
+        z-index: 1; /* Ensures the dropdown is layered above other elements */
+    }
+
+    .nav-single-link .dropdown-content a {
+        padding: 2vw 2.4vw; /* Adds padding inside dropdown links */
+        text-decoration: none; /* Removes underline from dropdown links */
+        display: block; /* Displays the links as block-level elements */
+        color: #000; /* Sets the link text color to black */
+    }
+
+    .nav-single-link .dropdown-content a:hover {
+        background-color: #ddd; /* Changes the background color on hover for dropdown links */
+    }
+}

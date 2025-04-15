@@ -1,0 +1,88 @@
+footer {
+  position: relative;
+  top: 0;
+  width: 100%;
+  height: 15vh;
+  background-color: #0f600b;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 0;
+  border: none;
+  outline: none;
+  margin: 0;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  vertical-align: center;
+  align-items: center;
+  color: #ffffff;
+}
+
+
+
+/* Styles for Feedback Form */
+.feedback-form-container {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #ffffff;
+    padding: 2vh 5vw 2vh 3vw;
+    border-radius: 1vh; /* Adjust radius for relative scaling */
+    box-shadow: 0 0 1.5vh rgba(0, 0, 0, 0.2); /* Convert shadow blur to vh */
+    z-index: 1000;
+}
+
+.feedback-form-container input,
+.feedback-form-container textarea {
+    width: 100%;
+    margin-top: 0.5vh; /* Use vh for vertical margin */
+    margin-bottom: 1vh;
+    padding: 0.8vh 1vw; /* Convert padding to vh and vw */
+    font-size: 1em;
+}
+
+#feedbackButton {
+    position: absolute;
+    right: 2vw; /* Convert to vw for consistent placement */
+    justify-content: flex-end;
+    background-color: #ffffff;
+    color: #000000;
+    padding: 1vh 2vw; /* Use vh and vw for padding */
+    border: 0.5vh solid #000000;
+    border-radius: 0.5vh; /* Use vh for radius */
+    cursor: pointer;
+}
+
+/* Styles for feedback page */
+.feedback-page-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 3vh 5vw; /* Padding adjusted for responsive scaling */
+    width: 100%; /* Full width to center content */
+    height: 100%;
+    overflow-y: auto;
+}
+
+.feedback-entry {
+    margin: 1vh;
+    padding: 1.5vh 2vw; /* Adjust padding for responsiveness */
+    border: 0.1vh solid #ddd; /* Convert border to vh */
+    border-radius: 1vh; /* Use vh for border radius */
+    background-color: #f9f9f9;
+    width: 80%;
+    overflow-wrap: break-word; /* Break long words if necessary */
+    white-space: normal; /* Allow multi-line text */
+    display: flex;
+    flex-direction: column; /* Ensure contents stack vertically */
+}
+
+.feedback-entry h3 {
+    margin-top: 0;
+}
+
+.feedback-entry p {
+    margin: 0.5vh 0 0;
+}

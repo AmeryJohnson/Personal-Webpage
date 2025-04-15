@@ -1,0 +1,4 @@
+"inst_id","type","name","department","address","city","state","zip"
+"1","Academia","Michigan State University","Computer Science",NULL,"East Lansing","Michigan","48825"
+"2","Industry","D&W Fresh Market","Customer Service",NULL,"Grand Haven","Michigan","49417"
+"3","Industry","Keenan Marina","Yard",NULL,"Grand Haven","Michigan","49417"

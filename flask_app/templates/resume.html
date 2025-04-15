@@ -1,0 +1,65 @@
+{% extends "shared/layout.html" %}
+
+{% block maincontent %}
+
+
+    <div class="resume-container">
+        {% for inst_id, institution in resume_data.items() %}
+        <div class="institution">
+            <div class="institution-header">
+                <span class="institution-name">{{ institution.name }}</span>
+                <span class="institution-location">
+                    {% if institution.department %}{{ institution.department }}{% endif %}
+                    {% if institution.address and institution.address != 'NULL' %}{{ institution.address }}{% endif %}
+                    {% if institution.city %}{{ institution.city }}, {% endif %}
+                    {% if institution.state %}{{ institution.state }}{% endif %}
+                    {% if institution.zip and institution.zip != 'NULL' %}{{ institution.zip }}{% endif %}
+                </span>
+            </div>
+
+            {% for pos_id, position in institution.positions.items() %}
+            <div class="position">
+                <div class="position-header">
+                    <span class="position-title">{{ position.title }}</span>
+                    <span class="position-dates">
+                        {% if position.start_date %}{{ position.start_date }} - {% endif %}
+                        {% if position.end_date != 'NULL' %}{{ position.end_date }}{% endif %}
+                    </span>
+                </div>
+                <div class="position-responsibilities">
+                    {% if position.responsibilities %}{{ position.responsibilities }}{% endif %}
+                </div>
+
+                {% for exp_id, experience in position.experiences.items() %}
+                <div class="experience">
+                    <div class="experience-header">
+                        <span class="experience-name">
+                            {% if experience.hyperlink and experience.hyperlink != 'NULL' %}
+                            <a href="{{ experience.hyperlink }}">{{ experience.name }}</a>
+                            {% else %}
+                            {{ experience.name }}
+                            {% endif %}
+                        </span>
+                    </div>
+                    <div class="experience-description">
+                        {% if experience.description %}{{ experience.description }}{% endif %}
+                    </div>
+
+                    {% if experience.skills %}
+                    <ul class="skills-list">
+                        {% for skill_id, skill in experience.skills.items() %}
+                        <li class="skill">{{ skill.name }}</li>
+                        {% endfor %}
+                    </ul>
+                    {% endif %}
+                </div>
+                {% endfor %}
+            </div>
+            {% endfor %}
+        </div>
+        {% endfor %}
+    </div>
+
+{% endblock %}
+
+

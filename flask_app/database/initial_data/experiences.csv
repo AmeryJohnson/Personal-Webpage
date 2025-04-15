@@ -1,0 +1,14 @@
+"experience_id","position_id","name","description","hyperlink","start_date","end_date"
+"1","1","First Experience","Cumulative GPA: 3.51",NULL,"2021-09-01",NULL
+"2","1","Second Experience","Dean's List",NULL,"2022-01-10",NULL
+"3","1","Third Experience","Leinweber Software Scholarship Recipient",NULL,"2022-09-01",NULL
+"4","2","First Experience","Provided exceptional customer service as a Cashier at D&W Fresh Market in Grand Haven, Michigan.",NULL,NULL,NULL
+"5","2","Second Experience","Utilized transaction software efficiently to process customer purchases and ensure a seamless checkout experience.",NULL,NULL,NULL
+"6","2","Third Experience","Developed strong interpersonal skills through daily interactions with customers, enhancing their overall shopping experience.",NULL,NULL,NULL
+"7","3","First Experience","Bagged groceries, retrieved shopping carts, and maintained cleanliness in store to ensure a pleasant shopping experience for customers.",NULL,NULL,NULL
+"8","3","Second Experience","Utilized hands-on experience to troubleshoot and fix machinery in the bottle return area, showcasing problem-solving skills and mechanical aptitude.",NULL,NULL,NULL
+"9","3","Third Experience","Assisted customers in navigating the store, stocked shelves efficiently, and managed time effectively to ensure smooth store operations.",NULL,NULL,NULL
+"10","4","First Experience","Supervised operations at Grand Haven Keenan Marina location.",NULL,NULL,NULL
+"11","4","Second Experience","Utilized fork truck and hi-lo to transport boats efficiently.",NULL,NULL,NULL
+"12","4","Third Experience","Ensured smooth boat movement from rack to water and vice versa.",NULL,NULL,NULL
+

@@ -1,0 +1,193 @@
+body {
+  margin: 0; /* Remove default margin of the body element */
+  padding: 0; /* Remove default padding of the body element */
+}
+
+main {
+  display: flex; /* Set the layout to a flex container */
+  flex-direction: column; /* Arrange children elements in a vertical column */
+  align-items: center; /* Center the children horizontally within the main element */
+  justify-content: center; /* Center the children vertically within the main element */
+  height: 101vh; /* Set the height of the main element to 101% of the viewport height */
+  background-color: #008000FF; /* Set a green background color with full opacity */
+  background-size: cover; /* Ensure the background image covers the entire element */
+  background-repeat: no-repeat; /* Prevent the background from repeating */
+  box-sizing: border-box; /* Ensure padding is included in the element's width and height */
+  color: #000000; /* Set the text color to black */
+}
+
+.row-of-content {
+  display: flex; /* Set the layout to a flex container */
+  height: 50vh; /* Set the height to 50% of the viewport height */
+  width: 80vw; /* Set the width to 80% of the viewport width */
+  margin-top: 5vh; /* Add space above the row */
+}
+
+.column {
+  flex: 1; /* Each column takes up equal space within the row */
+  display: flex; /* Set the layout to a flex container */
+  flex-direction: column; /* Arrange children in a vertical column */
+  box-sizing: border-box; /* Ensure padding and border are included in the element's total width and height */
+  border: 2px solid #000000; /* Add a solid black border around each column */
+  background-color: #ffffff; /* Set the background color of the column to white */
+  color: #000000FF; /* Set the text color to black */
+  text-align: justify; /* Justify the text within the column */
+  margin-left: 1vw;
+  margin-right: 1vw; /* Add space between columns */
+  position: relative; /* Set the column's position as relative for any absolutely positioned children */
+}
+
+.column a {
+  width: auto; /* Automatically adjust the width of anchor links */
+  height: 100%; /* Set the height of anchor links to 100% of their parent */
+  object-fit: contain; /* Maintain aspect ratio of contained content */
+}
+
+.column a img {
+  width: 100%; /* Set the image width to fill the anchor element */
+  height: 100%; /* Set the image height to fill the anchor element */
+  object-fit: contain; /* Maintain the image's aspect ratio within the container */
+}
+
+.column img {
+  width: 100%; /* Set the image width to fill the column */
+  height: 100%; /* Set the image height to fill the column */
+  object-fit: cover; /* Ensure the image covers the container while maintaining aspect ratio */
+}
+
+.name-description {
+  overflow-y: auto; /* Allow vertical scrolling if content overflows */
+  max-height: 100%; /* Ensure the height does not exceed the container's height */
+  text-align: center; /* Center-align the text horizontally */
+  padding: 0.3vw;
+}
+
+.center-text {
+  padding: 2vh;
+  text-align: center; /* Center-align the text */
+  color: white; /* Set the text color to white */
+  object-fit: contain;
+}
+
+/* Main CSS for Resume Page only */
+.resume-main {
+  display: flex; /* Set the layout to a flex container */
+  flex-direction: column; /* Arrange children elements in a vertical column */
+  align-items: center; /* Center the children horizontally within the main element */
+  justify-content: center; /* Center the children vertically within the main element */
+  height: 225vh; /* Set the height of the main element to 101% of the viewport height */
+  background-color: #008000FF; /* Set a green background color with full opacity */
+  background-size: cover; /* Ensure the background image covers the entire element */
+  background-repeat: no-repeat; /* Prevent the background from repeating */
+  box-sizing: border-box; /* Ensure padding is included in the element's width and height */
+  color: #000000; /* Set the text color to black */
+
+}
+
+.resume-container {
+    margin: 0;
+    padding: 5%;
+    width: 70vw;
+    height: 190vh;
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    border: 0.5vh solid #000000FF;
+    overflow-y: auto;
+}
+
+.institution, .position, .experience {
+    margin-left: 2.5vh;
+    margin-top: 2.5vh;
+    margin-bottom: 2.5vh;
+    justify-content: left;
+}
+
+.institution-header, .position-header, .experience-header {
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+}
+
+.institution-name {
+    font-size: 130%;
+}
+.position-title {
+    font-size: 120%;
+}
+.experience-name {
+    font-size: 100%;
+}
+.institution-location, .position-dates {
+    font-size: 80%;
+    color: #666;
+    text-align: right; /* Align text to the right */
+}
+
+.position-responsibilities, .experience-description {
+    font-size: 100%;
+    color: #333;
+    margin-top: 1vh;
+}
+
+.skills-list {
+    margin: 1vh 0 0 1.5vh;
+    list-style-type: circle;
+}
+
+.skill {
+    font-size: 90%;
+    color: #444;
+}
+
+/* Below is for one column setup on smaller screens */
+@media screen and (max-width: 650px) {
+  main {
+    display: flex; /* Set the layout to a flex container */
+    flex-direction: column; /* Arrange children in a vertical column */
+    align-items: center; /* Center the children horizontally */
+    justify-content: center; /* Center the children vertically */
+    height: 200vh; /* Increase the height to 200% of the viewport for smaller screens */
+    background-color: #008000FF; /* Set the background color to green */
+    background-size: cover; /* Ensure the background covers the entire element */
+    background-repeat: no-repeat; /* Prevent the background from repeating */
+    padding: 4vh; /* Add padding inside the main element */
+    box-sizing: border-box; /* Include padding in the element's total width and height */
+    color: #000000FF; /* Set the text color to black */
+  }
+
+  .row-of-content {
+    display: flex; /* Set the layout to a flex container */
+    flex-direction: column; /* Arrange the content in a vertical column instead of a row */
+    height: 170vh; /* Increase the height for small screens */
+    width: 80vw; /* Set the width to 80% of the viewport width */
+    margin-top: 5vh; /* Add space above the row */
+  }
+
+  .column {
+    flex: 1; /* Each column takes up equal space */
+    display: flex; /* Set the layout to a flex container */
+    flex-direction: column; /* Arrange children in a vertical column */
+    box-sizing: content-box; /* Include padding and border in the element's total width and height */
+    border: 2px solid #000000FF; /* Add a solid black border around each column */
+    background-color: #FFFFFFFF; /* Set the background color to white */
+    color: #000000FF; /* Set the text color to black */
+    text-align: justify; /* Justify the text within the column */
+    margin-bottom: 5vh; /* Add space between rows of content */
+
+  }
+
+  .column img {
+  width: 100%; /* Set the image width to fill the column */
+  height: 100%; /* Set the image height to fill the column */
+  object-fit: cover; /* Ensure the image covers the container while maintaining aspect ratio */
+  }
+
+
+
+  .name-description {
+    overflow-y: auto; /* Allow vertical scrolling if the content exceeds available height */
+    max-height: 100%; /* Ensure the height does not exceed the container's height */
+    text-align: center; /* Center-align the text horizontally */
+    padding: 2vh; /* Sets padding around text */
+  }
+}

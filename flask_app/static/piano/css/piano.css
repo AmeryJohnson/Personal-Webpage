@@ -1,0 +1,129 @@
+.greySquare {
+  width: 40vw; /* Sets the width of the container to 40% of the viewport width, making it responsive */
+  height: 70vh; /* Sets the height to 70% of the viewport height */
+  background-color: #414141; /* Dark grey background color for contrast */
+  display: flex; /* Enables flexbox layout to easily align child elements */
+  flex-direction: column; /* Stacks children in a column */
+  align-items: center; /* Centers children horizontally */
+  justify-content: flex-end; /* Aligns children at the bottom */
+  border-radius: 4vh; /* Rounds the corners for a softer look */
+  position: relative; /* Important for absolute positioning inside the container */
+  object-fit: contain; /* Ensures content fits inside */
+  overflow: hidden; /* Prevents child elements from overflowing the container */
+  margin-bottom: 10vh; /* Adds space below the element */
+}
+
+img {
+  max-width: 100%; /* Ensures the image does not exceed the container width */
+  max-height: 60vh; /* Restricts the height to 60% of the viewport height for responsiveness */
+  object-fit: contain; /* Ensures the entire image fits within the container without distortion */
+}
+
+.piano {
+  width: 80%; /* Piano container takes up 80% of the parent width */
+  display: flex; /* Flexbox layout to arrange the piano keys */
+  justify-content: center; /* Centers the piano keys horizontally */
+  position: relative; /* Ensures elements inside can be positioned absolutely */
+}
+
+.whiteKeys {
+  display: flex; /* Flex layout for white keys to align them horizontally */
+}
+
+.whiteKey {
+  width: 3vw; /* White key width is set relative to viewport width */
+  height: 40vh; /* White key height is 40% of the viewport height */
+  background-color: #FFFFFFFF; /* White color for the white keys */
+  border: 1px solid #000000FF; /* Adds a black border for contrast */
+  position: relative; /* Relative positioning allows for future flexibility */
+  border-radius: 10px; /* Slight rounding of white keys for a polished look */
+}
+
+.blackKeys {
+  position: absolute; /* Positions black keys relative to the piano */
+  top: 0; /* Aligns black keys at the top of the piano */
+}
+
+.blackKey {
+  width: 2vw; /* Black key width set relative to the viewport width */
+  height: 27vh; /* Black key height is set shorter than white keys */
+  background-color: #000000FF; /* Black color for the black keys */
+  border: 1px solid #000000FF; /* Black border to match the key color */
+  position: absolute; /* Allows precise placement of each black key */
+  border-radius: 8px; /* Rounded corners for black keys for consistency */
+}
+
+.blackKey:nth-child(1) {
+  left: -13.6vw; /* Positions the first black key at this precise spot */
+}
+
+.blackKey:nth-child(2) {
+  left: -10.4vw; /* Positions the second black key at this precise spot */
+}
+
+.blackKey:nth-child(3) {
+  left: -4.2vw; /* Positions the third black key */
+}
+
+.blackKey:nth-child(4) {
+  left: -1.1vw; /* Positions the fourth black key */
+}
+
+.blackKey:nth-child(5) {
+  left: 2vw; /* Positions the fifth black key */
+}
+
+.blackKey:nth-child(6) {
+  left: 8.3vw; /* Positions the sixth black key */
+}
+
+.blackKey:nth-child(7) {
+  left: 11.4vw; /* Positions the seventh black key */
+}
+
+.pianoName {
+  position: absolute; /* Positions the piano name text inside the piano container */
+  top: 2vh; /* Places the text 2% down from the top of the container */
+  left: 50%; /* Centers the text horizontally */
+  transform: translateX(-50%); /* Ensures perfect centering by shifting 50% of its width left */
+  text-align: center; /* Centers the text inside the text box */
+  color: #FFFFFFFF; /* White color for the text */
+  object-fit: contain; /* Ensures the text fits inside its container */
+  font-size: 4vh; /* Font size is relative to viewport height */
+  z-index: 1; /* Ensures the text stays above other elements */
+}
+
+.awokenText {
+  display: none; /* Hides the "awokenText" element initially */
+  position: absolute; /* Allows precise positioning of the text */
+  top: 12vh; /* Positions the text 12% down from the top */
+  left: 50%; /* Centers the text horizontally */
+  transform: translateX(-50%); /* Ensures the text is centered by shifting 50% left */
+  text-align: center; /* Centers the text inside its container */
+  color: #FFFFFFFF; /* White text color */
+  object-fit: contain; /* Ensures the text fits well */
+  font-size: 3vh; /* Sets the font size relative to the viewport height */
+  z-index: 1; /* Keeps the text above other elements */
+}
+
+.keyboard {
+  position: absolute; /* Allows exact placement of this element */
+  bottom: 0; /* Places it at the bottom of the piano */
+  left: 50%; /* Centers it horizontally */
+  transform: translateX(-50%); /* Perfect horizontal centering */
+  padding: 0.5vw; /* Adds padding for spacing around the text */
+  background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black background for better contrast */
+  color: #FFFFFFFF; /* White text color */
+  font-size: 1vw; /* Sets the font size for the text */
+}
+
+.whiteKey.pressed {
+  background-color: #FF0000FF; /* Changes color to red when a white key is pressed */
+}
+.blackKey.pressed {
+  background-color: #FF0000FF; /* Changes color to red when a black key is pressed */
+}
+
+#greatOldOneImage {
+  display: none; /* Hides the "greatOldOneImage" initially */
+}

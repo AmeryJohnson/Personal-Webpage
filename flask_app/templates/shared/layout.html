@@ -1,0 +1,105 @@
+<!-- FILL ME IN WITH CODE FOR YOUR PAGE LAYOUT -->
+<!DOCTYPE html>
+<html lang="eng">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title> Amery's Webpage </title>
+  <link rel="stylesheet"    href="{{ url_for('static', filename='main/css/main.css') }}">
+  <link rel="stylesheet"    href="{{ url_for('static', filename='main/css/header.css') }}">
+  <link rel="stylesheet"    href="{{ url_for('static', filename='main/css/navbar.css') }}">
+  <link rel="stylesheet"    href="{{ url_for('static', filename='main/css/footer.css') }}">
+  <link rel="shortcut icon" href="{{ url_for('static', filename='main/images/favicon.ico') }}">
+  {% block extracss %}{% endblock %}
+  <script src="{{ url_for('static', filename='main/js/main.js') }}" defer></script>
+  {% block extrajs %}{% endblock %}
+</head>
+
+<body>
+
+    <header>
+    </header>
+    <nav>
+        <!-- Left text in nav -->
+        <div class="nav-left">
+            {% if not user or user == 'Unknown' %}
+                <p>CSE 477 - Homework 3</p>
+            {% else %}
+                <p>Logged in as {{ user }}</p>
+            {% endif %}
+        </div>
+        <!-- Links for nav -->
+        <div class="nav-links">
+            <a href="{{ url_for('home') }}">Home</a>
+            <a href="{{ url_for('projects') }}">Projects</a>
+            <a href="{{ url_for('resume') }}">Resume</a>
+            <a href="{{ url_for('chat') }}">Chat</a>
+            {% if not user or user == 'Unknown' %}
+                <a href="{{ url_for('login') }}">Login</a>
+            {% else %}
+                <a href="{{ url_for('logout') }}">Logout</a>
+            {% endif %}
+
+            <a href="https://www.linkedin.com/in/amery-johnson-856670293/">
+                <img src="/static/main/images/social-linkedin.png" alt="LinkedIn Image" loading="lazy">
+            </a>
+        </div>
+        <!-- Single link for screen size change -->
+        <div class="nav-single-link">
+            <label for="menu-toggle" class="menu-icon">
+                <img src="/static/main/images/menu-bar.png" alt="Menu Bar" loading="lazy">
+            </label>
+            <!-- Checkbox hack to press button without javascript -->
+            <input type="checkbox" id="menu-toggle" class="menu-toggle" title="Clickable menu">
+            <div class="dropdown-content">
+                <a href="{{ url_for('home') }}">Home</a>
+                <a href="{{ url_for('projects') }}">Projects</a>
+                <a href="{{ url_for('resume') }}">Resume</a>
+                <a href="{{ url_for('chat') }}">Chat</a>
+                {% if not user or user == 'Unknown' %}
+                    <a href={{ url_for('login') }}>Login</a>
+                {% else %}
+                    <a href="{{ url_for('logout') }}">Logout</a>
+                {% endif %}
+                <a href="https://www.linkedin.com/in/amery-johnson-856670293/">LinkedIn</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- The main content  -->
+    <main class="{% if is_resume_page %}resume-main{% endif %}">  <!-- Conditional class here -->
+        {% block maincontent %}{% endblock %}
+    </main>
+
+    <!-- The footer of the file -->
+    <footer>
+        <h3>&copy; Amery Johnson</h3>
+        <button id="feedbackButton" onclick="toggleFeedbackForm()">Give Feedback</button>
+    </footer>
+
+    <!-- Feedback Form (initially hidden) -->
+    <div id="feedbackForm" class="feedback-form-container">
+        <form action="{{ url_for('processfeedback') }}" method="POST" enctype="multipart/form-data">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required title="Enter name here">
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required title="Enter email here">
+
+            <label for="comment">Comment:</label>
+            <textarea id="comment" name="comment" required title="Enter comment here"></textarea>
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+</body>
+</html>
+
+
+
+
+
+
+
+

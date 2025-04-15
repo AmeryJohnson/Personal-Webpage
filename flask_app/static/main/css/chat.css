@@ -1,0 +1,31 @@
+#chat {
+    width: 80%;
+    height: 50%;
+    padding: 1.5vh 2vw;
+    margin-top: 3vh;
+    box-sizing: border-box;
+    border: 0.5vh solid #ccc;
+    border-radius: 1vh;
+    background-color: #f8f8f8;
+    font-size: 1.5vw;
+    resize: none;
+    overflow-y: auto;
+}
+
+#user-input {
+    display: flex;
+    flex-direction: column; /* Stacks items vertically */
+    align-items: center;
+    margin-top: 1vh;
+}
+
+#message-input {
+    width: 100%; /* Adjusted width */
+    padding: 0.5vh;
+    font-size: 1.2vw;
+    margin-bottom: 1vh;
+}
+
+button {
+    margin-top: 1vh;
+}
